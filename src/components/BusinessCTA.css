@@ -1,0 +1,63 @@
+.mk-cta {
+  position: relative;
+  background: linear-gradient(135deg, var(--forest-deep) 0%, var(--forest) 100%);
+  padding: 88px 0;
+  overflow: hidden;
+}
+
+.mk-cta__field {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+.mk-cta__field svg {
+  position: absolute;
+  right: -60px;
+  bottom: -40px;
+  width: 800px;
+  max-width: none;
+  height: auto;
+}
+
+.mk-cta__inner {
+  position: relative;
+  z-index: 1;
+  max-width: 680px;
+  text-align: left;
+}
+
+.mk-cta__heading {
+  color: var(--paper);
+  font-size: clamp(1.8rem, 3.2vw, 2.5rem);
+}
+
+.mk-cta__text {
+  margin-top: 18px;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.mk-cta__note {
+  margin-top: 14px;
+  font-weight: 600;
+  color: var(--amber-soft);
+  font-size: 0.98rem;
+}
+
+.mk-cta__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 34px;
+}
+
+@media (max-width: 480px) {
+  .mk-cta__actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .mk-cta__actions .btn-mk {
+    width: 100%;
+  }
+}

@@ -1,0 +1,120 @@
+.mk-approach__intro {
+  max-width: 620px;
+  margin-bottom: 56px;
+}
+
+.mk-approach__track {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.mk-approach__step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex: 1;
+  min-width: 0;
+  padding: 0 6px;
+}
+
+.mk-approach__node {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+
+.mk-approach__icon {
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  background: var(--paper);
+  border: 1.5px solid var(--forest);
+  color: var(--forest);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+  box-shadow: var(--shadow-card);
+}
+
+.mk-approach__connector {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: calc(100% + 24px);
+  height: 2px;
+  background: repeating-linear-gradient(
+    to right,
+    var(--sage) 0,
+    var(--sage) 8px,
+    transparent 8px,
+    transparent 14px
+  );
+  transform: translateY(-50%);
+  z-index: 0;
+}
+
+.mk-approach__title {
+  font-size: 1rem;
+  margin-bottom: 8px;
+}
+
+.mk-approach__text {
+  font-size: 0.86rem;
+  color: var(--ink-soft);
+  line-height: 1.5;
+  max-width: 190px;
+}
+
+@media (max-width: 991px) {
+  .mk-approach__track {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+  }
+
+  .mk-approach__step {
+    flex-direction: row;
+    text-align: left;
+    align-items: flex-start;
+    padding: 0;
+  }
+
+  .mk-approach__node {
+    flex-direction: column;
+    width: auto;
+    margin-right: 22px;
+    margin-bottom: 0;
+  }
+
+  .mk-approach__connector {
+    left: 50%;
+    top: 100%;
+    width: 2px;
+    height: 46px;
+    background: repeating-linear-gradient(
+      to bottom,
+      var(--sage) 0,
+      var(--sage) 8px,
+      transparent 8px,
+      transparent 14px
+    );
+    transform: translateX(-50%);
+  }
+
+  .mk-approach__step {
+    padding-bottom: 28px;
+  }
+
+  .mk-approach__text {
+    max-width: none;
+  }
+}

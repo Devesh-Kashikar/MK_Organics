@@ -1,0 +1,256 @@
+/* ===========================================================
+   MK ORGANICS — DESIGN TOKENS
+=========================================================== */
+:root {
+  /* Color palette */
+  --forest-deep: #122b23;   /* near-black green — footer, dark surfaces */
+  --forest: #1c4a3a;        /* primary brand green */
+  --forest-mid: #2f6b54;    /* mid green — accents, hovers */
+  --sage: #7fa189;          /* sage green — secondary accent */
+  --sage-soft: #e4ebe3;     /* soft sage tint — backgrounds */
+  --amber: #b9791e;         /* warm amber, echoes the cordyceps fruiting body — used sparingly */
+  --amber-soft: #f3e3cb;
+  --cream: #f8f5ee;         /* soft cream background */
+  --paper: #ffffff;
+  --ink: #16241c;           /* primary text, green-black */
+  --ink-soft: #55645a;      /* secondary text */
+  --line: #e1e0d5;          /* hairline borders */
+
+  /* Type */
+  --font-display: "Fraunces", Georgia, serif;
+  --font-body: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+  /* Radius scale — larger surfaces get larger radius */
+  --r-lg: 28px;
+  --r-md: 18px;
+  --r-sm: 10px;
+
+  /* Shadow — single soft shadow reused, not stacked */
+  --shadow-card: 0 12px 32px -18px rgba(18, 43, 35, 0.28);
+
+  --container-max: 1240px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  color: var(--ink);
+  background: var(--cream);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+#root {
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  color: var(--forest-deep);
+  margin: 0;
+  line-height: 1.12;
+  font-weight: 600;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button {
+  font-family: var(--font-body);
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid var(--amber);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ===========================================================
+   LAYOUT HELPERS
+=========================================================== */
+.container-xl {
+  width: 100%;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.section {
+  padding: 96px 0;
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 64px 0;
+  }
+}
+
+.section-cream { background: var(--cream); }
+.section-paper { background: var(--paper); }
+.section-sage  { background: var(--sage-soft); }
+
+.eyebrow {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.8rem;
+  letter-spacing: 0.06em;
+  color: var(--forest-mid);
+  margin-bottom: 14px;
+}
+
+.section-heading {
+  font-size: clamp(1.9rem, 3vw, 2.6rem);
+  max-width: 640px;
+}
+
+.section-lede {
+  font-size: 1.05rem;
+  color: var(--ink-soft);
+  max-width: 620px;
+  line-height: 1.65;
+  margin-top: 16px;
+}
+
+/* ===========================================================
+   BUTTONS
+=========================================================== */
+.btn-mk {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-weight: 600;
+  font-size: 0.98rem;
+  padding: 14px 28px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: transform 0.18s ease, background-color 0.18s ease, color 0.18s ease, box-shadow 0.18s ease;
+  white-space: nowrap;
+}
+
+.btn-mk:active { transform: translateY(1px); }
+
+.btn-mk-primary {
+  background: var(--forest);
+  color: var(--paper);
+}
+.btn-mk-primary:hover {
+  background: var(--forest-deep);
+}
+
+.btn-mk-outline {
+  background: transparent;
+  color: var(--forest-deep);
+  border-color: var(--forest-deep);
+}
+.btn-mk-outline:hover {
+  background: var(--forest-deep);
+  color: var(--paper);
+}
+
+.btn-mk-light {
+  background: var(--paper);
+  color: var(--forest-deep);
+}
+.btn-mk-light:hover {
+  background: var(--sage-soft);
+}
+
+.btn-mk-ghost-light {
+  background: transparent;
+  color: var(--paper);
+  border-color: rgba(255,255,255,0.45);
+}
+.btn-mk-ghost-light:hover {
+  background: rgba(255,255,255,0.12);
+  border-color: var(--paper);
+}
+
+/* ===========================================================
+   CARDS
+=========================================================== */
+.mk-card {
+  background: var(--paper);
+  border-radius: var(--r-md);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-card);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.mk-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 38px -18px rgba(18, 43, 35, 0.34);
+}
+
+.icon-ring {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--sage-soft);
+  color: var(--forest);
+  flex-shrink: 0;
+}
+
+/* ===========================================================
+   REVEAL ON SCROLL (single, restrained pattern)
+=========================================================== */
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Fine print / meta text */
+.text-meta {
+  color: var(--ink-soft);
+  font-size: 0.92rem;
+}
