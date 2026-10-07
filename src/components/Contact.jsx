@@ -223,7 +223,7 @@ export default function Contact() {
                   </span>
                   <div>
                     <span className="mk-contact__info-label">Email</span>
-                    <a href="mailto:punemk.organics@gmail.com">punemk.organics@gmail.com</a>
+                    <a href="mailto:punemk.organics@gmail.com">sales@mkorganics-pune.com</a>
                   </div>
                 </li>
                 <li>
@@ -233,7 +233,9 @@ export default function Contact() {
                   <div>
                     <span className="mk-contact__info-label">Address</span>
                     <span>
-                      Flat no-24/B, Tridal Housing Society, Dhayari Fhata, Sinhgad Road, Pune 411041
+                      Dhayari Fhata, Sinhgad Road, Pune, Maharashtra, India 
+                      <br/>
+                      Pin: 411041
                     </span>
                   </div>
                 </li>

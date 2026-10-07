@@ -23,7 +23,7 @@ export default function Footer() {
       <div className="container-xl mk-footer__grid row">
         <div className="col-lg-4 col-sm-6 mk-footer__brand">
           <div className="mk-footer__brand-row">
-            <img src={logo} alt="MK Organics logo" className="mk-footer__logo" />
+            <img src="goldan_logo.png"alt="MK Organics logo" className="mk-footer__logo" />
             <div>
               <span className="mk-footer__name">MK ORGANICS</span>
               <span className="mk-footer__tagline">Nature Meets Science</span>

@@ -17,10 +17,10 @@
 }
 
 .mk-footer__logo {
-  height: 42px;
-  width: 42px;
+  height: 70px;
+  width: 70px;
   object-fit: contain;
-  background: var(--paper);
+  /* background: var(--paper); */
   border-radius: 50%;
   padding: 4px;
 }

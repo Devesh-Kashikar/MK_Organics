@@ -60,7 +60,7 @@ export default function Navbar() {
             handleNavClick("#home");
           }}
         >
-          <img src={logo} alt="MK Organics logo" className="mk-navbar__logo" />
+          <img src="New_MK_Organics_Botanical_Logo-removebg.png" alt="MK Organics logo" className="mk-navbar__logo" />
           <span className="mk-navbar__brand-text">
             <span className="mk-navbar__name">MK ORGANICS</span>
             <span className="mk-navbar__tagline">Nature Meets Science</span>
